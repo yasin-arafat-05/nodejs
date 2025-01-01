@@ -176,6 +176,8 @@ person1.greet(); // Output: Hi, I am Rahim and I am 25 years old.
 
 ---
 
+`Asynchronous and callbacks শেষ করবো তারপর Event Loop দেখবো ঃ `
+
 ## ৮. **ইভেন্ট লুপ (Event Loop)**
 
 ### ✨ **কীভাবে কাজ করে:**
