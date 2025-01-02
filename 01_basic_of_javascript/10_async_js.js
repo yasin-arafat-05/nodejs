@@ -40,4 +40,7 @@ https://rajrajhans.com/2020/08/exploring-javascript-asyncjs/
 cooking();
 console.log("complete order for customer1 . . .");
 
-
+/*
+If we have many, async function then we can't control the 
+flow of execution . To do this we use callback.
+*/
