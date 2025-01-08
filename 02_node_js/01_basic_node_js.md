@@ -16,7 +16,7 @@ Node.js-এর মাধ্যমে আমরা ব্রাউজারের
 
 <br>
 
-# ` **Node.js এবং Browser-এর মধ্যে পার্থক্য:**`
+# `02 **Node.js এবং Browser-এর মধ্যে পার্থক্য:**`
 
 <br>
 
@@ -35,7 +35,7 @@ Node.js-এর মাধ্যমে আমরা ব্রাউজারের
 
 **উদাহরণ:**
 1. Node.js ব্যবহার করে আপনি সার্ভার তৈরি করতে পারেন:
-   ```javascript
+```javascript
    const http = require('http');
    const server = http.createServer((req, res) => {
        res.end('Hello from Node.js!');
@@ -43,19 +43,180 @@ Node.js-এর মাধ্যমে আমরা ব্রাউজারের
    server.listen(3000, () => {
        console.log('Server is running on port 3000');
    });
-   ```
+```
 
 2. ব্রাউজারে সাধারণ জাভাস্ক্রিপ্ট:
-   ```javascript
+```javascript
    console.log('Hello from the Browser!');
    alert('This is running in the browser!');
-   ```
+```
 
+<br>
+
+
+---
+
+<br>
+
+# `03 **Crate a package.json file with "npm init" **`
+
+<br>
+
+**Command:**
+
+```bash 
+    npm init
+```
+
+In `package.json` file: 
+
+![imgage](img/img01.png)
+
+
+```bash 
+    "start" : "node node.js"
+```
+
+<br>
+
+- `As, Key we have to give "start" `
+
+- `If we add this line then, when ever we run "npm start" it will execute the node.js file.`
+
+- `Run a specific file: "npm index.js"`
+
+
+<br>
+
+
+---
+
+<br>
+
+# `04 **Always run a file with Nodemon:**`
+
+<br>
+
+`সাধারণত, Node.js অ্যাপ্লিকেশন চালানোর সময় কোডে পরিবর্তন করলে আপনাকে প্রতিবার ম্যানুয়ালি সার্ভার বন্ধ করে আবার চালু করতে হয়। কিন্তু Nodemon ব্যবহার করলে এটি স্বয়ংক্রিয়ভাবে আপনার কোডের পরিবর্তন ডিটেক্ট করে এবং সার্ভারকে রিস্টার্ট করে দেয়।`
+
+আপনি Nodemon একটি নির্দিষ্ট প্রজেক্টের জন্য ইনস্টল করতে চাইলে, এটি **লোকাল ইনস্টলেশন** করতে হবে। নিচে ধাপে ধাপে নির্দেশনা দেওয়া হলো:
+
+---
+
+### **Step 1: লোকাল ইনস্টলেশন**
+আপনার প্রজেক্ট ডিরেক্টরিতে যান এবং### **Step 3: Nodemon রান করুন**
+আপনার অ্যাপ্লিকেশন চালানোর জন্য নিচের কমান্ডটি ব্যবহার করুন:
+
+```bash
+npm run start
+```
+
+এটি Nodemon দিয়ে আপনার অ্যাপ্লিকেশন চালাবে এবং আপনার ফাইলে কোনো পরিবর্তন হলে স্বয়ংক্রিয়ভাবে সার্ভার রিস্টার্ট করবে।
+
+---
+
+### **Step 4: Nodemon ইনস্টল চেক করুন**
+ইনস্টলেশন সঠিক হয়েছে কিনা দেখতে, আপনার প্রজেক্ট ডিরেক্টরির **`node_modules/.bin`** ফোল্ডারে **nodemon** কমান্ড রয়েছে কিনা যাচাই করুন।
+
+```bash
+ls node_modules/.bin
+```
+
+---
+
+### **লোকাল ইনস্টলেশন কেন ব্যবহার করবেন?**
+1. **এক্সপ্লিসিট ডিপেনডেন্সি:** প্রজেক্টের নির্দিষ্ট ডিপেনডেন্সি আলাদা রাখতে সাহায্য করে।
+2. **কম কনফ্লিক্ট:** গ্লোবাল ইনস্টলেশনের কারণে কোনো সমস্যা বা ভার্সন কনফ্লিক্ট হয় না।
+3. **কোড শেয়ারিং সহজ:** অন্য কেউ আপনার প্রজেক্ট ক্লোন করলে তারাও Nodemon লোকালি পাবে। 
+
+---
+
+### **উপসংহার**
+Nodemon-কে একটি নির্দিষ্ট প্রজেক্টে ইনস্টল করে `npm run` কমান্ডের মাধ্যমে খুব সহজে ব্যবহার করতে পারেন। এটি প্রজেক্টের মধ্যে ডেভেলপমেন্ট সহজ এবং ম্যানেজেবল রাখে। 
+ নিচের কমান্ডটি রান করুন:
+
+```bash
+npm install nodemon --save-dev
+```
+- **`--save-dev`:** এটি Nodemon-কে প্রজেক্টের ডেভেলপমেন্ট ডিপেনডেন্সি হিসেবে ইনস্টল করবে।
+
+`dev আমাদের package.json ফাইলে, devDependencies key এর ভ্যালু গুলোর মধ্যে nodemon দেখতে পারবো ।`
+
+---
+
+### **Step 2: প্যাকেজ স্ক্রিপ্ট তৈরি করুন**
+একটি প্রজেক্টে Nodemon ব্যবহারের জন্য আপনার **`package.json`** ফাইলে একটি স্ক্রিপ্ট যুক্ত করুন।
+
+**উদাহরণ:**
+`package.json` ফাইলে নিচের মতো স্ক্রিপ্ট যোগ করুন:
+
+```json
+"scripts": {
+  "start": "nodemon app.js"
+}
+```
+
+### **Existing form the nodemon:**
+
+-> crt+c
+-> `Progamatically we use process module.`
+-> process.exit(1) or 
+-> process.exit = 1
 <br>
 
 ---
 
+<br>
+
+# `05 **Read environment variables:**`
+
+<br>
+
+Node.js-এ **environment variables** পড়া অত্যন্ত গুরুত্বপূর্ণ কারণ এটি আমাদের অ্যাপ্লিকেশনকে আরো **ডাইনামিক**, **নিরাপদ**, এবং **পোর্টেবল** করে তোলে। নিচে বাংলা ভাষায় এর প্রয়োজনীয়তার বিস্তারিত ব্যাখ্যা দেওয়া হলো:
 
 
 
+### **Environment Variable কি?**
+Environment variable হলো সিস্টেম-লেভেলের কিছু তথ্য যা আপনার অ্যাপ্লিকেশন রান করার সময় ব্যবহার করে। এটি সাধারণত কনফিগারেশন সেটিংস সংরক্ষণ করতে ব্যবহৃত হয়, যেমন:
+- ডাটাবেজ কানেকশন স্ট্রিং
+- API কী (API Key)
+- সার্ভারের পোর্ট নম্বর
+- তৃতীয় পক্ষের সার্ভিসের তথ্য
+- ডিপ্লয়মেন্ট মোড (Development, Production ইত্যাদি)
+
+### **কেন Environment Variable ব্যবহার করবেন?**
+#### 1. **গোপন তথ্য সুরক্ষিত রাখা**  
+#### 2. **ডাইনামিক কনফিগারেশন**  
+#### 3. **কোড শেয়ারিং সহজ করা**  
+#### 4. **একাধিক পরিবেশে কাজ করা সহজ করা**  
+#### 5. **DevOps এবং CI/CD সিস্টেমে সহজ ইন্টিগ্রেশন**  
+
+
+`**Give enviromnet value in terminal**`
+
+```bash
+Name=yasin Profession=Developer node env.js 
+```
+
+**For receving this in env.js file:**
+```js
+Name = process.env.Name
+Profession = process.env.Profession
+```
+
+### `Read environment file from .env file: `
+
+- 1st make a .env file.
+- Using 'dotenv' module fetch the data.
+- just add: `require("dotenv).config();`
+
+
+---
+
+<br>
+
+# `06 **repl (read evaluate print loop):**`
+
+
+<br>
 

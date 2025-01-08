@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-tutorial",
+  "version": "1.0.0",
+  "description": "\"This is the nodejs tutorial for beginners\"",
+  "homepage": "https://github.com/yasin-arafat-05/nodejs#readme",
+  "bugs": {
+    "url": "https://github.com/yasin-arafat-05/nodejs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasin-arafat-05/nodejs.git"
+  },
+  "license": "ISC",
+  "author": "Yasin Arafat",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
