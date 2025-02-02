@@ -156,11 +156,11 @@ npm install nodemon --save-dev
 }
 ```
 
-### **Existing form the nodemon:**
+## `**Existing form the nodemon:**`
 
 -> crt+c
 -> `Progamatically we use process module.`
--> process.exit(1) or 
+-> process.exit(1) or  <br>
 -> process.exit = 1
 <br>
 
