@@ -294,9 +294,12 @@ $
 
 <br>
 
-# `08 **Format the input:**`
+# `09 **Format the input:**`
 
 <br>
+
+- ```js npm install readline``` take user input with readline
+- ```js npm install prompt-sync ``` take user input promt-sync
 
 
 
