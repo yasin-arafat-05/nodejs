@@ -220,3 +220,58 @@ Profession = process.env.Profession
 
 <br>
 
+REPL (Read-Evaluate-Print Loop) হলো একটি ইন্টার‍্যাক্টিভ প্রোগ্রামিং পরিবেশ, যা ব্যবহারকারীকে কোড লেখার, তাৎক্ষণিকভাবে তা এক্সিকিউট করার এবং ফলাফল দেখার সুবিধা দেয়। Node.js-এ REPL ব্যবহার করা খুব সহজ।
+
+**Node.js REPL শুরু করার জন্য নিচের ধাপগুলো অনুসরণ করতে হবে:**
+
+1. **Node.js REPL চালু করা (কমান্ড লাইন থেকে):**  
+   শুধু টার্মিনালে `node` লিখে এন্টার প্রেস করলেই Node.js এর ডিফল্ট REPL চালু হবে।
+
+2. **কাস্টম REPL তৈরি করা (কোডের মাধ্যমে):**
+
+```javascript
+const repl = require("repl");  // REPL মডিউল ইমপোর্ট করা হচ্ছে
+
+repl.start('$ ');  // কাস্টম প্রম্পট চিহ্ন দিয়ে REPL শুরু করা হচ্ছে
+```
+
+**ব্যাখ্যা:**
+
+- `const repl = require("repl")`:  
+  এটি Node.js এর বিল্ট-ইন `repl` মডিউল ইমপোর্ট করছে যা REPL পরিবেশ তৈরি করতে সাহায্য করে।
+
+- `repl.start('$ ')`:  
+  এটি REPL শুরু করছে এবং প্রম্পট হিসেবে `$` দেখাচ্ছে। অর্থাৎ, যেখানে আপনি ইনপুট দেবেন সেখানে `$` চিহ্নটি দেখাবে।
+
+**উদাহরণ আউটপুট:**
+
+```bash
+$ 2 + 2
+4
+$ console.log("হ্যালো, world!")
+হ্যালো, world!
+undefined
+$ 
+```
+
+
+---
+<br>
+
+# `07 **Take the value of argumnet:**`
+
+<br>
+
+- With `process.argv`
+- With `minimist` (node argment.s --argument)
+
+
+---
+<br>
+
+# `07 **Take the value of argumnet:**`
+
+<br>
+
+
+
