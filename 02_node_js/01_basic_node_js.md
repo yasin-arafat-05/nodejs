@@ -269,9 +269,35 @@ $
 ---
 <br>
 
-# `07 **Take the value of argumnet:**`
+# `08 **Format the output:**`
 
 <br>
+
+-  %s 
+-  %d 
+-  %i
+-  %o
+- console.clear()
+- console.count("String")
+- console.countReset("String") // string should be same to reset the count.
+
+✅ 1. console.trace() এর কাজ কী?
+  -  এটি এমনভাবে কাজ করে যেন আমরা জানতে পারি "এই লাইনে এক্সিকিউশন কীভাবে এল?"
+  -  এটি ফাংশন কলের একটি স্ট্যাক ট্রেস দেখায়, যা জানায় কোন ফাংশন থেকে কোন ফাংশন কল করা হয়েছে।
+
+✅ 2. ```js npm install progress``` progress bar
+
+✅ 3. ```js npm install chalk ```  change text color in the console
+
+
+---
+
+<br>
+
+# `08 **Format the input:**`
+
+<br>
+
 
 
 
